@@ -93,25 +93,35 @@ html {
 
 .slider-buttons {
     display: flex;
+    justify-content: flex-end;
 }
 
 .slider-buttons__item {
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.slider-buttons__item span {
     width: 20px;
     height: 20px;
-    margin-right: 20px;
+    margin: auto;
+    display: block;
     border-radius: 50%;
     border: none;
     background-color: darkblue;
 }
 
 .slider-buttons__item:hover {
+    cursor: pointer;
+}
+
+.slider-buttons__item:hover span {
     background-color: white;
     cursor: pointer;
 }
 
-.active {
-    width: 20px;
-    height: 20px;
+.active span {
     border-radius: 50%;
     border: 2px solid white;
     background-color: #444240;
