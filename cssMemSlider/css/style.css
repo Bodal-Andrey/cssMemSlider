@@ -1,0 +1,180 @@
+body {
+    min-width: 1100px;
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    background-color: #444240;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.slider {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider-list {
+    width: 1024px;
+    height: 500px;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-list__item {
+    flex: 0 0 1024px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 3%;
+    transition: 1s all;
+}
+
+.slide-1 {
+    background-image: url('../img/picture_1.jpg');
+}
+
+.slide-2 {
+    background-image: url('../img/picture_2.jpg');
+}
+
+.slide-3 {
+    background-image: url('../img/picture_3.jpg');
+}
+
+.slide-4 {
+    background-image: url('../img/picture_4.jpg');
+}
+
+.slider-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.slider-buttons__item {
+    width: 50px;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.slider-buttons__item span {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    display: block;
+    border-radius: 50%;
+    border: none;
+    background-color: darkblue;
+}
+
+.slider-buttons__item:hover {
+    cursor: pointer;
+}
+
+.slider-buttons__item:hover span {
+    background-color: white;
+    cursor: pointer;
+}
+
+.active span {
+    border-radius: 50%;
+    border: 2px solid darkblue;
+    background-color: #444240;
+}
+
+.active:hover span {
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: #444240;
+}
+
+.slider-text {
+    display: flex;
+    width: 500px;
+    overflow: hidden;
+}
+
+.slider-text__item {
+    flex: 0 0 500px;
+    transition: 1s all;
+}
+
+.slider-buttons {
+    width: 500px;
+}
+
+@media (max-width: 768px) {
+    body {
+    min-width: 768px;
+    }
+    
+    .container {
+        max-width: 728px;
+    }
+
+    .slider-list {
+        width: 728px;
+        height: 355px;
+    }
+    
+    .slider-list__item {
+        flex: 0 0 728px;
+    }
+
+    .slide-1 {
+        background-image: url('../img/picture_1-768.jpg');
+    }
+    
+    .slide-2 {
+        background-image: url('../img/picture_2-768.jpg');
+    }
+    
+    .slide-3 {
+        background-image: url('../img/picture_3-768.jpg');
+    }
+    
+    .slide-4 {
+        background-image: url('../img/picture_4-768.jpg');
+    }
+
+    .slider-text {
+        order: 1;
+    }
+
+    .slider-buttons {
+        order: 0;
+    }
+
+    .slider-buttons__item:hover span {
+        background-color: inherit;
+    }
+
+    .active:hover span {
+        border-radius: 50%;
+        border: 2px solid darkblue;
+        background-color: #444240;
+    }
+}
