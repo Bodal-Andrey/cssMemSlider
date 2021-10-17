@@ -72,6 +72,7 @@ html {
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 3%;
+    transition: 1s all;
 }
 
 .slide-1 {
@@ -124,6 +125,7 @@ html {
 
 .slider-text__item {
     flex: 0 0 500px;
+    transition: 1s all;
 }
 
 .slider-buttons {
